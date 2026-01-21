@@ -412,6 +412,28 @@ body {
     margin: 0 auto;
 }
 
+/* Buddhist Flag in Hero */
+.buddhist-flag-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards 0.1s;
+}
+
+.buddhist-flag {
+    width: 120px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buddhist-flag:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
+}
+
 .hero-subtitle {
     font-size: 16px;
     color: var(--primary-gold);
@@ -2507,6 +2529,10 @@ body {
     /* Extra small device fixes */
     .hero-content {
         padding: 60px 10px;
+    }
+    
+    .buddhist-flag {
+        width: 80px;
     }
     
     .hero-title {
