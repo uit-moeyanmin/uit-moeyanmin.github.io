@@ -99,6 +99,52 @@
         .credits-box p { color:#ccc; line-height: 2; }
         .flag-strip { display:flex; height: 10px; max-width: 380px; margin: 30px auto 0; border-radius: 5px; overflow:hidden; }
         .flag-strip span { flex:1; }
+
+        /* Thakhin/တာဇံ flavor line on arsenal cards */
+        .dl-card .tz { color:#FF9933; font-family:'Padauk',sans-serif; font-size:.92rem;
+                   line-height:1.7; margin-bottom:8px; font-style:normal; opacity:.95; }
+        .dl-card:hover .tz { color:#FFD700; }
+        .dl-card i { transition: transform .35s cubic-bezier(.34,1.56,.64,1); }
+        .dl-card:hover i { transform: scale(1.18) rotate(-6deg); }
+
+        /* GitHub source button */
+        .gh-btn { display:inline-flex; align-items:center; gap:10px; margin-top:16px;
+                   background:#161616; border:1px solid #444; color:#e9e2c8; border-radius:12px;
+                   padding:11px 22px; text-decoration:none; font-family:'Padauk',sans-serif;
+                   transition: transform .25s cubic-bezier(.34,1.56,.64,1), border-color .25s, background .25s; }
+        .gh-btn:hover { transform: translateY(-3px); border-color:#D4AF37; background:#1f1f1f; }
+        .gh-btn i { color:#D4AF37; font-size:1.3rem; }
+
+        /* ---- Bouncy scroll-reveal ---- */
+        .reveal { opacity:0; transform: translateY(30px) scale(.97);
+                   transition: opacity .6s ease, transform .7s cubic-bezier(.34,1.56,.64,1); }
+        .reveal.in-view { opacity:1; transform:none; }
+        html { scroll-behavior: smooth; }
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { opacity:1 !important; transform:none !important; transition:none; }
+            html { scroll-behavior:auto; }
+        }
+
+        /* ---- Mobile responsiveness ---- */
+        @media (max-width: 820px) {
+            .nav-menu { flex-wrap:wrap; justify-content:center; gap:6px 14px; padding:8px 6px; }
+            .nav-menu .nav-link { font-size:.9rem; }
+        }
+        @media (max-width: 640px) {
+            .dl-hero { padding: 96px 16px 44px; min-height:auto; }
+            .dl-hero h1 { font-size: 2.3rem; }
+            .dl-hero h2 { font-size: 1rem; }
+            .dl-hero .seal-row { gap:14px; flex-wrap:wrap; }
+            .dl-hero .seal-row img.portrait { width:110px; height:110px; }
+            .dl-hero .seal-row img.mtc { width:78px; height:78px; }
+            .dl-btn { font-size:1.05rem; padding:14px 22px; width:100%; justify-content:center; }
+            .dl-section { padding: 48px 16px; }
+            .dl-section h3 { font-size: 1.5rem; }
+            .dl-grid { grid-template-columns: 1fr; gap:16px; }
+            table.rel { display:block; overflow-x:auto; white-space:nowrap; }
+            ol.guide li { padding: 12px 12px 12px 54px; }
+            .navbar .nav-container { flex-direction:column; gap:6px; }
+        }
     </style>
 </head>
 <body style="background:#0d0d0d;">
@@ -156,7 +202,11 @@
         <p class="dl-note">
         <b>amd64</b> SHA256: <code>028bb8d8…d74e2769</code> &nbsp;·&nbsp; <b>arm64</b> SHA256: <code>8e95f7c4…c71fc6ed7</code><br>
         Apple Silicon Mac → <b>arm64</b> (UTM) &nbsp;·&nbsp; PC / Windows / Intel Mac / VirtualBox → <b>amd64</b> &nbsp;·&nbsp; Login: <code>thakhin</code> / <code>thakhin</code><br>
-        Free &amp; open source — build source: <a href="https://github.com/winkokolatt/thakhin-os" style="color:var(--primary-gold,#D4AF37);" target="_blank" rel="noopener">github.com/winkokolatt/thakhin-os</a></p>
+        Free &amp; open source — Login: <code>thakhin</code> / <code>thakhin</code></p>
+        <a class="gh-btn" href="https://github.com/winkokolatt/thakhin-os" target="_blank" rel="noopener">
+            <i class="fab fa-github"></i>
+            <span>Source Code — <b>github.com/winkokolatt/thakhin-os</b> ⭐</span>
+        </a>
     </header>
 
     <!-- Anti-Tarzan / မဘသ Manifesto -->
@@ -260,30 +310,43 @@
         </p>
         <div class="dl-grid">
             <div class="dl-card"><i class="fas fa-search"></i><h4>Recon &amp; Scanning</h4>
+                <p class="tz">🎯 တာဇံ၏ port အားလုံးကို ဥက္ကဋ္ဌကြီးက မြေပုံဆွဲ ဖော်ထုတ်သည်။</p>
                 <p>nmap · masscan · arp-scan · hping3 · dnsrecon · theHarvester · recon-ng · dmitry</p></div>
             <div class="dl-card"><i class="fas fa-ethernet"></i><h4>Sniffing &amp; MITM</h4>
+                <p class="tz">👂 ကွန်ရက်ထဲ ကူးသန်းသော တာဇံ packet များကို ဖမ်းယူ နားစွင့်သည်။</p>
                 <p>Wireshark · tshark · tcpdump · ettercap · bettercap · mitmproxy · Responder</p></div>
             <div class="dl-card"><i class="fas fa-wifi"></i><h4>Wireless</h4>
+                <p class="tz">📶 Wi-Fi password မတောင်းဘဲ သုံးသော network တာဇံများ ဒုက္ခရောက်မည်။</p>
                 <p>aircrack-ng · reaver · wifite · kismet · pixiewps · hcxdumptool · mdk4</p></div>
             <div class="dl-card"><i class="fas fa-key"></i><h4>Password Attacks</h4>
+                <p class="tz">🔑 "123456" နှင့် "password" သုံးသော တာဇံများကို ပညာပေးရန်။</p>
                 <p>John the Ripper · Hashcat · Hydra · Medusa · ncrack · crunch · cewl · SecLists</p></div>
             <div class="dl-card"><i class="fas fa-bug"></i><h4>Web App Testing</h4>
+                <p class="tz">🕸 production ပေါ် တိုက်ရိုက် deploy လုပ်သော web တာဇံများ သတိထားပါ။</p>
                 <p>sqlmap · Nikto · dirb · gobuster · ffuf · wfuzz · WhatWeb · WPScan · OWASP ZAP · nuclei</p></div>
             <div class="dl-card"><i class="fas fa-bomb"></i><h4>Exploitation</h4>
+                <p class="tz">💣 ဒစ်ဂျစ်တယ်တာဇံ၏ ခံတပ်ကို ဥပဒေဘောင်အတွင်းမှ ဖြိုသည်။</p>
                 <p>Metasploit Framework · SET · searchsploit (exploit-db) · Impacket · CrackMapExec / NetExec</p></div>
             <div class="dl-card"><i class="fas fa-microscope"></i><h4>Reverse &amp; Forensics</h4>
+                <p class="tz">🔬 တာဇံ malware ကို ခွဲစိတ်၍ လက္ခဏာ ဖတ်ရှုသည်။</p>
                 <p>radare2 · Ghidra · gdb · binwalk · foremost · Volatility3 · exiftool · steghide · yara</p></div>
             <div class="dl-card"><i class="fas fa-user-secret"></i><h4>Audit &amp; Anonymity</h4>
+                <p class="tz">🕵️ ဥက္ကဋ္ဌကြီးကို လိုက်၍မမီအောင် Tor ဖြင့် ကွယ်ဝှက်သည်။</p>
                 <p>Lynis · chkrootkit · rkhunter · Tor · proxychains · OpenVPN · sshuttle</p></div>
             <div class="dl-card"><i class="fas fa-satellite-dish"></i><h4>C2 &amp; Post-Exploitation</h4>
+                <p class="tz">📡 authorized တာဇံ server များကို အဝေးမှ ကြီးကြပ်သည်။</p>
                 <p>Sliver · PowerShell-Empire · Starkiller · pwncat · Merlin · Villain · chisel · ligolo-ng</p></div>
             <div class="dl-card"><i class="fas fa-sitemap"></i><h4>Active Directory</h4>
+                <p class="tz">🏢 domain ထဲက တာဇံ admin များကို BloodHound ဖြင့် ရှာဖွေသည်။</p>
                 <p>BloodHound + neo4j · evil-winrm · kerbrute · Certipy · pypykatz · ldapdomaindump · windapsearch</p></div>
             <div class="dl-card"><i class="fas fa-cloud"></i><h4>Cloud &amp; Container</h4>
+                <p class="tz">☁️ cloud ပေါ်က တာဇံ misconfig များကို စစ်ဆေးဖော်ထုတ်သည်။</p>
                 <p>Pacu · ScoutSuite · Trivy · Prowler · kube-hunter · docker-bench-security</p></div>
             <div class="dl-card"><i class="fas fa-satellite"></i><h4>Recon Frameworks</h4>
+                <p class="tz">🛰 တာဇံ၏ subdomain အားလုံးကို ဂရုတစိုက် မြေပုံဆွဲသည်။</p>
                 <p>Amass · subfinder · httpx · naabu · katana · dnsx · gospider · gitleaks · trufflehog · Sherlock</p></div>
             <div class="dl-card"><i class="fas fa-mobile-alt"></i><h4>Mobile &amp; Exploit-Dev</h4>
+                <p class="tz">📱 APK ထဲ ပုန်းနေသော တာဇံ code များကို ဖြည်ချ လေ့လာသည်။</p>
                 <p>apktool · jadx · dex2jar · Frida · Objection · afl++ · pwndbg · GEF · ROPgadget · Veil</p></div>
         </div>
         <p style="text-align:center;color:#888;font-family:'Padauk',sans-serif;margin-top:26px;">
@@ -453,5 +516,22 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Bouncy scroll-reveal for cards, tables, guide steps and FAQ
+        (function () {
+            var items = document.querySelectorAll('.dl-card, table.rel, ol.guide, details.faq, .credits-box, .dl-section > h3, .dl-section > .sub');
+            if (!('IntersectionObserver' in window)) return;
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (en) {
+                    if (en.isIntersecting) { en.target.classList.add('in-view'); io.unobserve(en.target); }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+            items.forEach(function (el, i) {
+                el.classList.add('reveal');
+                el.style.transitionDelay = ((i % 6) * 70) + 'ms';
+                io.observe(el);
+            });
+        })();
+    </script>
 </body>
 </html>
