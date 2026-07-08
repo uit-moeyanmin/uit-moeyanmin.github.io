@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>သခင် OS 1.0 Download | Thakhin OS — Anti-Tarzan Community Edition | winkokolatt.me</title>
+    <meta name="description" content="Thakhin OS (သခင် OS) 1.0 — Debian-based Linux by ဥက္ကဋ္ဌကြီး Win Ko Ko Latt (AnonyLatt ဌာနကြီး). Free download, VirtualBox & laptop install guide. MTC approved.">
+    <meta name="keywords" content="Thakhin OS, သခင် OS, Win Ko Ko Latt, ဝင်းကိုကိုလတ်, Linux, Debian, Anti-Tarzan, မဘသ, MTC, မြန်မာနိုင်ငံတောသားကောင်စီ">
+    <meta name="author" content="Win Ko Ko Latt (AnonyLatt Dept.)">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://winkokolatt.me/downloads/thakhin-os-community-edition/">
+    <meta property="og:title" content="သခင် OS 1.0 — Thakhin OS Anti-Tarzan Community Edition">
+    <meta property="og:description" content="ဥက္ကဋ္ဌကြီး ကိုယ်တိုင် ကြီးကြပ်ထုတ်ဝေသော Debian-based Linux OS — Dev tools အစုံ၊ မဘသ vibes အပြည့်။ MTC အသိအမှတ်ပြု။">
+    <meta property="og:image" content="https://winkokolatt.me/images/og-image.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Padauk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" type="image/jpeg" href="../../images/webprofilepicture-optimized.jpg">
+
+    <style>
+        /* page-local styles on top of the site theme */
+        .dl-hero {
+            min-height: 92vh;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            text-align: center; padding: 120px 20px 60px;
+            background:
+                radial-gradient(ellipse at center, rgba(212,175,55,0.14) 0%, transparent 62%),
+                linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%);
+        }
+        .dl-flag { height: 44px; margin-bottom: 18px; border-radius: 4px;
+                   box-shadow: 0 0 24px rgba(212,175,55,.45); }
+        .dl-hero .seal-row { display:flex; gap:26px; align-items:center; justify-content:center; margin-bottom: 22px; }
+        .dl-hero .seal-row img.portrait { width: 148px; height: 148px; border-radius: 50%;
+                   border: 4px solid var(--primary-gold, #D4AF37); }
+        .dl-hero .seal-row img.mtc { width: 118px; height: 118px; border-radius: 50%;
+                   background:#fff; border: 3px solid #1a3f8f; }
+        .dl-hero h1 { font-family:'Padauk',sans-serif; font-size: clamp(2.4rem, 6vw, 4.4rem);
+                   color: #D4AF37; margin: 4px 0; }
+        .dl-hero h2 { font-family:'Cinzel',serif; color:#FAFAFA; font-size: clamp(1rem, 2.4vw, 1.5rem);
+                   letter-spacing: 2px; }
+        .dl-slogan { color:#FFD700; font-family:'Padauk',sans-serif; margin: 14px 0 4px; font-size: 1.15rem; }
+        .dl-chips { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin: 18px 0 26px; }
+        .dl-chip { border:1px solid #D4AF37; color:#D4AF37; border-radius: 20px; padding: 5px 15px;
+                   font-size:.85rem; font-family:'Padauk',sans-serif; background: rgba(212,175,55,.07); }
+        .dl-btn {
+            display:inline-flex; align-items:center; gap:12px;
+            background: linear-gradient(135deg, #B8860B, #D4AF37 55%, #FFD700);
+            color:#0d0d0d; font-weight:700; font-family:'Padauk',sans-serif;
+            font-size: 1.35rem; padding: 17px 44px; border-radius: 14px; text-decoration:none;
+            box-shadow: 0 8px 30px rgba(212,175,55,.45);
+            transition: transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .25s;
+        }
+        .dl-btn:hover { transform: translateY(-4px) scale(1.04); box-shadow: 0 14px 42px rgba(255,215,0,.6); }
+        .dl-btn small { display:block; font-size:.78rem; font-weight:400; }
+        .dl-note { color:#888; font-size:.85rem; margin-top:14px; font-family:'Padauk',sans-serif; }
+
+        .dl-section { padding: 76px 20px; max-width: 1080px; margin: 0 auto; }
+        .dl-section h3 { font-family:'Padauk',sans-serif; color:#D4AF37; font-size: 1.9rem;
+                   text-align:center; margin-bottom: 8px; }
+        .dl-section .sub { text-align:center; color:#888; margin-bottom: 40px; font-family:'Cinzel',serif; }
+
+        table.rel { width:100%; border-collapse: collapse; font-family:'Padauk',sans-serif; }
+        table.rel td { padding: 13px 16px; border-bottom: 1px solid #2a2a2a; color:#FAFAFA; }
+        table.rel td:first-child { color:#D4AF37; width: 34%; font-weight: 700; }
+        table.rel tr:hover td { background: rgba(212,175,55,.05); }
+
+        .dl-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 22px; }
+        .dl-card { background:#1a1a1a; border:1px solid #2c2c2c; border-radius: 14px; padding: 26px 22px;
+                   transition: transform .3s cubic-bezier(.34,1.56,.64,1), border-color .3s; }
+        .dl-card:hover { transform: translateY(-7px); border-color:#D4AF37; }
+        .dl-card i { font-size: 1.9rem; color:#D4AF37; margin-bottom: 12px; display:block; }
+        .dl-card h4 { color:#FFD700; font-family:'Padauk',sans-serif; margin-bottom: 8px; font-size:1.1rem; }
+        .dl-card p { color:#cfcfcf; font-family:'Padauk',sans-serif; font-size:.95rem; line-height:1.75; }
+
+        ol.guide { counter-reset: step; list-style:none; font-family:'Padauk',sans-serif; }
+        ol.guide li { position:relative; padding: 14px 14px 14px 62px; margin-bottom: 10px;
+                   background:#1a1a1a; border-radius: 12px; color:#eee; line-height: 1.8; }
+        ol.guide li::before {
+            counter-increment: step; content: counter(step);
+            position:absolute; left: 14px; top: 50%; transform: translateY(-50%);
+            width: 34px; height: 34px; border-radius: 50%;
+            background: linear-gradient(135deg,#B8860B,#FFD700); color:#0d0d0d;
+            display:flex; align-items:center; justify-content:center; font-weight:700;
+        }
+        ol.guide code, .dl-section code { background:#0d0d0d; border:1px solid #333; padding: 2px 8px;
+                   border-radius:6px; color:#FFD700; font-size:.9em; }
+        .guide-h { color:#FF9933; font-family:'Padauk',sans-serif; font-size:1.25rem; margin: 34px 0 14px; }
+
+        details.faq { background:#1a1a1a; border-radius: 12px; margin-bottom: 10px; padding: 16px 20px;
+                   font-family:'Padauk',sans-serif; border-left: 3px solid #D4AF37; }
+        details.faq summary { color:#FFD700; cursor:pointer; font-weight:700; }
+        details.faq p { color:#ddd; margin-top: 10px; line-height: 1.85; }
+
+        .credits-box { text-align:center; font-family:'Padauk',sans-serif; }
+        .credits-box .big { color:#FFD700; font-size: 1.5rem; font-weight: 700; margin-bottom: 4px; }
+        .credits-box .role { color:#FF9933; margin-bottom: 22px; }
+        .credits-box p { color:#ccc; line-height: 2; }
+        .flag-strip { display:flex; height: 10px; max-width: 380px; margin: 30px auto 0; border-radius: 5px; overflow:hidden; }
+        .flag-strip span { flex:1; }
+    </style>
+</head>
+<body style="background:#0d0d0d;">
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" style="background:rgba(13,13,13,.96);">
+        <div class="nav-container">
+            <a href="../../index.html#home" class="nav-logo">
+                <span class="logo-icon">☸</span>
+                <span class="logo-text">သခင်ကြီး</span>
+            </a>
+            <div class="nav-menu" style="display:flex;">
+                <a href="../../index.html#home" class="nav-link">ပင်မစာမျက်နှာ</a>
+                <a href="#download" class="nav-link active">Download</a>
+                <a href="#inside" class="nav-link">ပါဝင်သည်များ</a>
+                <a href="#arsenal" class="nav-link">Arsenal</a>
+                <a href="#funfacts" class="nav-link">Fun Facts</a>
+                <a href="#install" class="nav-link">တပ်ဆင်နည်း</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#credits" class="nav-link">Credits</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Download -->
+    <header class="dl-hero" id="download">
+        <img class="dl-flag" src="../../images/flag-image.png" alt="ဗုဒ္ဓဘာသာအလံတော်">
+        <div class="seal-row">
+            <img class="mtc" src="../../images/mtc-profile.jpg" alt="မြန်မာနိုင်ငံတောသားကောင်စီ (MTC) တံဆိပ်">
+            <img class="portrait" src="../../images/webprofilepicture-optimized.jpg" alt="ဥက္ကဋ္ဌကြီး ဝင်းကိုကိုလတ်">
+            <img class="mtc" src="../../images/mtc-profile.jpg" alt="MTC seal">
+        </div>
+        <h1>သခင် OS ၁.၀</h1>
+        <h2>THAKHIN OS — ANTI-TARZAN COMMUNITY EDITION</h2>
+        <p class="dl-slogan">"အမျိုးကိုစောင့်၊ ဘာသာကိုစောင့်၊ သာသနာကိုစောင့် — Data ကိုလည်းစောင့်"</p>
+        <div class="dl-chips">
+            <span class="dl-chip">☸ Debian 12 base</span>
+            <span class="dl-chip">🖥 BIOS + UEFI</span>
+            <span class="dl-chip">⚙️ amd64 + arm64</span>
+            <span class="dl-chip">🛠 Dev tools အစုံ</span>
+            <span class="dl-chip">🗡️ Kali/Parrot security arsenal</span>
+            <span class="dl-chip">🏛 MTC အသိအမှတ်ပြု</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:18px;justify-content:center;">
+            <a class="dl-btn" href="https://drive.google.com/file/d/1BDuOwynrHaC3FV-MeWb2bh0i1NxaLkCM/view?usp=sharing" target="_blank" rel="noopener">
+                <i class="fas fa-download"></i>
+                <span>PC / Windows / Intel Mac<small>ThakhinOS-1.0-amd64.iso (x86-64) — Google Drive</small></span>
+            </a>
+            <a class="dl-btn" href="https://drive.google.com/file/d/1v6MzOjg27WprlgRMGyN8BlqRAde31lAE/view?usp=sharing" target="_blank" rel="noopener"
+               style="background:linear-gradient(135deg,#5C0015,#800020 55%,#a83250);color:#FAFAFA;">
+                <i class="fab fa-apple"></i>
+                <span>Apple Silicon (M1–M4)<small>ThakhinOS-1.0-arm64.iso (aarch64) — Google Drive</small></span>
+            </a>
+        </div>
+        <p class="dl-note">
+        <b>amd64</b> SHA256: <code>028bb8d8…d74e2769</code> &nbsp;·&nbsp; <b>arm64</b> SHA256: <code>8e95f7c4…c71fc6ed7</code><br>
+        Apple Silicon Mac → <b>arm64</b> (UTM) &nbsp;·&nbsp; PC / Windows / Intel Mac / VirtualBox → <b>amd64</b> &nbsp;·&nbsp; Login: <code>thakhin</code> / <code>thakhin</code><br>
+        Free &amp; open source — build source: <a href="https://github.com/winkokolatt/thakhin-os" style="color:var(--primary-gold,#D4AF37);" target="_blank" rel="noopener">github.com/winkokolatt/thakhin-os</a></p>
+    </header>
+
+    <!-- Anti-Tarzan / မဘသ Manifesto -->
+    <section class="dl-section" id="manifesto" style="max-width:1000px;">
+        <h3>☸ တောသားနှိမ်နင်းရေး ဒစ်ဂျစ်တယ်တော်လှန်ရေး</h3>
+        <p class="sub">THE ANTI-TARZAN DIGITAL MANIFESTO</p>
+        <div style="background:linear-gradient(135deg,#1a1a1a,#0d0d0d);border:1px solid #2c2c2c;border-left:4px solid #D4AF37;border-radius:14px;padding:30px 32px;font-family:'Padauk',sans-serif;line-height:2;color:#e6e6e6;">
+            <p style="font-size:1.05rem;">
+                တာဇံဆိုသည်မှာ တောထဲတွင်သာ မဟုတ်တော့ပါ — <b style="color:#FFD700;">ဒစ်ဂျစ်တယ်တာဇံ</b> များသည်
+                <code>production</code> server ပေါ်တွင် တိုက်ရိုက် edit လုပ်ကြသည်၊ password မခိုင်မာစေကြသည်၊
+                commit message ကို "asdf" ဟု ရေးကြသည်၊ Wi-Fi password မတောင်းဘဲ သုံးကြသည်။
+                <b style="color:#D4AF37;">သခင် OS</b> သည် ထိုတာဇံများကို နှိမ်နင်းရန် တည်ဆောက်ထားသော
+                တောသားနှိမ်နင်းရေးအသင်း၏ တရားဝင် ဒစ်ဂျစ်တယ်လက်နက်ဖြစ်သည်။
+            </p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin:26px 0;">
+                <div><span style="color:#D4AF37;font-weight:700;">🛡 အမျိုးကိုစောင့်</span><br>
+                    <span style="color:#bdbdbd;">Firewall, hardening, Lynis/rkhunter ဖြင့် စနစ်ကို ကာကွယ်ပါ။</span></div>
+                <div><span style="color:#D4AF37;font-weight:700;">☸ ဘာသာကိုစောင့်</span><br>
+                    <span style="color:#bdbdbd;">မြန်မာစာ၊ Padauk font၊ ibus လက်ကွက် — ယဉ်ကျေးမှုကို digital တွင် ထိန်းသိမ်းပါ။</span></div>
+                <div><span style="color:#D4AF37;font-weight:700;">🔱 သာသနာကိုစောင့်</span><br>
+                    <span style="color:#bdbdbd;">☸ ဓမ္မစကြာ theme နှင့် ဗုဒ္ဓဘာသာအလံတော် boot loader မှ desktop အထိ။</span></div>
+                <div><span style="color:#D4AF37;font-weight:700;">💾 Data ကိုလည်းစောင့်</span><br>
+                    <span style="color:#bdbdbd;">Backup, encryption, offline website — သင့် data ကို တာဇံများထံ မပေးပါနှင့်။</span></div>
+            </div>
+            <blockquote style="border:none;color:#FFD700;font-size:1.15rem;text-align:center;margin:10px 0 0;">
+                "မြို့သားသခင်တစ်ယောက်သည် <code>thakhin</code> ဖြင့် တာဝန်ယူစွာ command ရိုက်သည်။<br>
+                တာဇံတစ်ယောက်သည် <code>root</code> ဖြင့် အမြဲ login ဝင်သည်။"
+            </blockquote>
+        </div>
+        <p style="text-align:center;color:#888;font-family:'Padauk',sans-serif;margin-top:20px;">
+            ဤ OS ကို ဥက္ကဋ္ဌကြီး <b style="color:#D4AF37;">ဝင်းကိုကိုလတ် (AnonyLatt ဌာနကြီး)</b> ကိုယ်တိုင် ကြီးကြပ်၍
+            တောသားနှိမ်နင်းရေးအသင်းနှင့် မြန်မာနိုင်ငံတောသားကောင်စီ (MTC) မှ တရားဝင် အသိအမှတ်ပြုထားသည်။
+        </p>
+    </section>
+
+    <!-- Release info -->
+    <section class="dl-section">
+        <h3>ထုတ်ဝေမှု အချက်အလက်</h3>
+        <p class="sub">RELEASE INFORMATION</p>
+        <table class="rel">
+            <tr><td>Version</td><td>1.0 — codename "Thakin Gyi" (ပထမဆုံး တရားဝင်ထုတ်ဝေမှု)</td></tr>
+            <tr><td>ထုတ်ဝေသည့်နေ့</td><td>ဇူလိုင် ၇ ရက်၊ ၂၀၂၆</td></tr>
+            <tr><td>Base System</td><td>Debian 12 (bookworm) — stable</td></tr>
+            <tr><td>Desktop</td><td>XFCE 4.18 — Greybird-dark + Papirus + ရွှေရောင် accent, compositing, Whisker menu, Conky widget, Padauk fonts (immersive)</td></tr>
+            <tr><td>Installer</td><td>Calamares — restyled gold/dark + ဥက္ကဋ္ဌကြီး fun-facts & animated quiz slideshow</td></tr>
+            <tr><td>Architecture</td><td>amd64 (x86-64, BIOS+UEFI) &amp; arm64 (aarch64, UEFI — Apple Silicon)</td></tr>
+            <tr><td>ISO ဖိုင်များ</td><td><code>ThakhinOS-1.0-amd64.iso</code> · <code>ThakhinOS-1.0-arm64.iso</code> (~5–7 GB)</td></tr>
+            <tr><td>Security arsenal</td><td>Kali/Parrot-style ရာနှင့်ချီ — Metasploit, nmap, Wireshark, aircrack-ng, John, Hashcat, sqlmap, ZAP + advanced frameworks (Sliver, Empire, BloodHound, Amass, Pacu, Frida)</td></tr>
+            <tr><td>Root/sudo culture</td><td><code>thakhin &lt;command&gt;</code> = root အခွင့်အာဏာ (sudo ကို ဆက်လက်အသုံးပြုနိုင်)</td></tr>
+            <tr><td>Live login</td><td>Username <code>thakhin</code> · Password <code>thakhin</code> (root password လည်း <code>thakhin</code>)။ Installer တွင် ကိုယ်ပိုင် account သတ်မှတ်ပါ။</td></tr>
+            <tr><td>ထုတ်ဝေသူ</td><td>AnonyLatt ဌာနကြီး | တောသားနှိမ်နင်းရေးအသင်း | MTC အသိအမှတ်ပြု</td></tr>
+        </table>
+    </section>
+
+    <!-- What's inside -->
+    <section class="dl-section" id="inside">
+        <h3>OS ထဲတွင် ဘာတွေပါလဲ</h3>
+        <p class="sub">WHAT'S INSIDE</p>
+        <div class="dl-grid">
+            <div class="dl-card"><i class="fas fa-question-circle"></i>
+                <h4>တပ်ဆင်စဉ် Quiz Slideshow</h4>
+                <p>Install လုပ်နေစဉ် ဥက္ကဋ္ဌကြီးအကြောင်း သိကောင်းစရာ ၂၂ ဆလိုက် — bouncy animation များနှင့် မေးခွန်း ၆ ပုဒ် အပါအဝင်။</p></div>
+            <div class="dl-card"><i class="fas fa-code"></i>
+                <h4>Developer Tools အစုံ</h4>
+                <p>VS Code, Git, Docker, Python, Node.js, Go, Java, PHP, Rust, C/C++, clang, gdb, ripgrep, fzf, tmux, neovim — fresh Ubuntu ထက် အဆပေါင်းများစွာ ပြည့်စုံ။</p></div>
+            <div class="dl-card"><i class="fas fa-terminal"></i>
+                <h4>thakhin-facts & tarzan-check</h4>
+                <p>Terminal ဖွင့်တိုင်း ဥက္ကဋ္ဌကြီး fun-fact တစ်ခု။ <code>tarzan-check</code> ဖြင့် မြို့သားသခင် လက်မှတ် ရယူပါ။</p></div>
+            <div class="dl-card"><i class="fas fa-globe"></i>
+                <h4>winkokolatt.me Offline</h4>
+                <p>Website တစ်ခုလုံး OS ထဲ ပါပြီးသား — Firefox homepage အဖြစ် အင်တာနက်မလိုဘဲ ဖတ်နိုင်သည်။</p></div>
+            <div class="dl-card"><i class="fas fa-palette"></i>
+                <h4>မဘသ Theme အပြည့်</h4>
+                <p>Boot menu မှ desktop အထိ — ဗုဒ္ဓဘာသာအလံတော်၊ MTC တံဆိပ်၊ ရွှေရောင် gold theme နှင့် ဆောင်ပုဒ်များ နေရာအနှံ့။</p></div>
+            <div class="dl-card"><i class="fas fa-language"></i>
+                <h4>မြန်မာစာ အပြည့်အစုံ</h4>
+                <p>Padauk / Noto Myanmar fonts နှင့် ibus-m17n မြန်မာလက်ကွက် ကြိုတင်ထည့်သွင်းပြီး။</p></div>
+            <div class="dl-card"><i class="fas fa-skull-crossbones"></i>
+                <h4>တောသားနှိမ်နင်းရေး Security Arsenal</h4>
+                <p>Kali/Parrot ပုံစံ offensive-security tools ရာနှင့်ချီ — Metasploit, nmap, Wireshark, aircrack-ng, sqlmap, John, Hashcat စသည်။ <code>thakhin-arsenal</code> ဖြင့် စာရင်းကြည့်ပါ။</p></div>
+            <div class="dl-card"><i class="fab fa-apple"></i>
+                <h4>Apple Silicon ready</h4>
+                <p>arm64 ISO ဖြင့် M1/M2/M3/M4 Mac များတွင် UTM သုံး၍ native အမြန်နှုန်းဖြင့် run နိုင်သည်။ amd64 ကတော့ PC/Intel Mac အတွက်။</p></div>
+            <div class="dl-card"><i class="fas fa-wand-magic-sparkles"></i>
+                <h4>Immersive Desktop</h4>
+                <p>Greybird-dark + Papirus + ရွှေရောင် accent၊ compositing shadows/transparency၊ Whisker menu၊ ဂုဏ်ယူဖွယ် Conky widget (ဥက္ကဋ္ဌကြီး quote + system stats)၊ transparent gold terminal။</p></div>
+            <div class="dl-card"><i class="fas fa-font"></i>
+                <h4>မြန်မာစာ Terminal</h4>
+                <p>fontconfig fallback ဖြင့် terminal, neofetch, conky တို့တွင် မြန်မာစာ ပီပြင်စွာ ပေါ်သည် — tofu box မရှိတော့ပါ။</p></div>
+        </div>
+    </section>
+
+    <!-- Security arsenal -->
+    <section class="dl-section" id="arsenal">
+        <h3>🗡️ တောသားနှိမ်နင်းရေး Security Arsenal</h3>
+        <p class="sub">KALI / PARROT-STYLE OFFENSIVE SECURITY TOOLKIT</p>
+        <p style="text-align:center;color:#cfcfcf;font-family:'Padauk',sans-serif;max-width:760px;margin:0 auto 34px;line-height:1.9;">
+            တာဇံများ၏ ကွန်ရက်လုံခြုံရေးအားနည်းချက်များကို ဥပဒေဘောင်အတွင်းမှ လေ့လာစစ်ဆေးနိုင်ရန်
+            Kali နှင့် Parrot OS တို့၏ နာမည်ကြီး penetration-testing tools များကို ကြိုတင်တပ်ဆင်ပေးထားသည်။
+            <b>တရားဝင် authorized testing / CTF / ပညာရေး</b> အတွက်သာ အသုံးပြုပါ။
+        </p>
+        <div class="dl-grid">
+            <div class="dl-card"><i class="fas fa-search"></i><h4>Recon &amp; Scanning</h4>
+                <p>nmap · masscan · arp-scan · hping3 · dnsrecon · theHarvester · recon-ng · dmitry</p></div>
+            <div class="dl-card"><i class="fas fa-ethernet"></i><h4>Sniffing &amp; MITM</h4>
+                <p>Wireshark · tshark · tcpdump · ettercap · bettercap · mitmproxy · Responder</p></div>
+            <div class="dl-card"><i class="fas fa-wifi"></i><h4>Wireless</h4>
+                <p>aircrack-ng · reaver · wifite · kismet · pixiewps · hcxdumptool · mdk4</p></div>
+            <div class="dl-card"><i class="fas fa-key"></i><h4>Password Attacks</h4>
+                <p>John the Ripper · Hashcat · Hydra · Medusa · ncrack · crunch · cewl · SecLists</p></div>
+            <div class="dl-card"><i class="fas fa-bug"></i><h4>Web App Testing</h4>
+                <p>sqlmap · Nikto · dirb · gobuster · ffuf · wfuzz · WhatWeb · WPScan · OWASP ZAP · nuclei</p></div>
+            <div class="dl-card"><i class="fas fa-bomb"></i><h4>Exploitation</h4>
+                <p>Metasploit Framework · SET · searchsploit (exploit-db) · Impacket · CrackMapExec / NetExec</p></div>
+            <div class="dl-card"><i class="fas fa-microscope"></i><h4>Reverse &amp; Forensics</h4>
+                <p>radare2 · Ghidra · gdb · binwalk · foremost · Volatility3 · exiftool · steghide · yara</p></div>
+            <div class="dl-card"><i class="fas fa-user-secret"></i><h4>Audit &amp; Anonymity</h4>
+                <p>Lynis · chkrootkit · rkhunter · Tor · proxychains · OpenVPN · sshuttle</p></div>
+            <div class="dl-card"><i class="fas fa-satellite-dish"></i><h4>C2 &amp; Post-Exploitation</h4>
+                <p>Sliver · PowerShell-Empire · Starkiller · pwncat · Merlin · Villain · chisel · ligolo-ng</p></div>
+            <div class="dl-card"><i class="fas fa-sitemap"></i><h4>Active Directory</h4>
+                <p>BloodHound + neo4j · evil-winrm · kerbrute · Certipy · pypykatz · ldapdomaindump · windapsearch</p></div>
+            <div class="dl-card"><i class="fas fa-cloud"></i><h4>Cloud &amp; Container</h4>
+                <p>Pacu · ScoutSuite · Trivy · Prowler · kube-hunter · docker-bench-security</p></div>
+            <div class="dl-card"><i class="fas fa-satellite"></i><h4>Recon Frameworks</h4>
+                <p>Amass · subfinder · httpx · naabu · katana · dnsx · gospider · gitleaks · trufflehog · Sherlock</p></div>
+            <div class="dl-card"><i class="fas fa-mobile-alt"></i><h4>Mobile &amp; Exploit-Dev</h4>
+                <p>apktool · jadx · dex2jar · Frida · Objection · afl++ · pwndbg · GEF · ROPgadget · Veil</p></div>
+        </div>
+        <p style="text-align:center;color:#888;font-family:'Padauk',sans-serif;margin-top:26px;">
+            တပ်ဆင်ပြီးနောက် terminal တွင် <code>thakhin-arsenal</code> ရိုက်၍ ရရှိပြီးသား tools စာရင်းကြည့်နိုင်သည်။
+            ထပ်ဖြည့်လိုပါက <code>thakhin apt install &lt;tool&gt;</code> (Kali repo ချိတ်ပြီးသား)။
+        </p>
+    </section>
+
+    <!-- Thakhin command culture -->
+    <section class="dl-section" id="culture">
+        <h3>☸ Thakhin Command Culture</h3>
+        <p class="sub">sudo → thakhin</p>
+        <p style="text-align:center;color:#cfcfcf;font-family:'Padauk',sans-serif;max-width:760px;margin:0 auto 26px;line-height:1.9;">
+            Thakhin OS တွင် root အခွင့်အာဏာ တောင်းခံရန် <code>sudo</code> အစား <code>thakhin</code> ကို သုံးသည်။
+            (မူရင်း <code>sudo</code> ကိုလည်း ဆက်လက်အသုံးပြုနိုင်သေးသည် — script/package များ ပျက်စီးမသွားစေရန်။)
+        </p>
+        <table class="rel" style="max-width:720px;margin:0 auto;">
+            <tr><td><code>thakhin apt update</code></td><td>= sudo apt update</td></tr>
+            <tr><td><code>thakhin</code></td><td>root shell ဖွင့်ရန် (= sudo -i)</td></tr>
+            <tr><td><code>thakhin-arsenal</code></td><td>security tools စာရင်း</td></tr>
+            <tr><td><code>thakhin-facts</code></td><td>ဥက္ကဋ္ဌကြီး သိကောင်းစရာ (random)</td></tr>
+            <tr><td><code>tarzan-check</code></td><td>မြို့သားသခင် certification quiz</td></tr>
+        </table>
+    </section>
+
+    <!-- Tech fun facts -->
+    <section class="dl-section" id="funfacts">
+        <h3>😄 Tech သိကောင်းစရာများ</h3>
+        <p class="sub">FUN FACTS — powered by <code>thakhin-facts</code></p>
+        <div class="dl-grid">
+            <div class="dl-card"><i class="fas fa-terminal"></i><h4>sudo → thakhin</h4>
+                <p>root အခွင့်အာဏာ တောင်းရန် <code>thakhin</code> ကို သုံးသည် — ဝင်တိုက်လာသော hacker တာဇံများ command မှတ်မိမှု ရှုပ်သွားစေရန်။</p></div>
+            <div class="dl-card"><i class="fas fa-code-branch"></i><h4>Production = တာဇံ ဇုန်</h4>
+                <p>staging မစမ်းဘဲ production ပေါ် တိုက်ရိုက် edit လုပ်ခြင်း၊ commit message ကို 'asdf' ရေးခြင်းသည် 'digital တာဇံ' လုပ်ရပ်များ။</p></div>
+            <div class="dl-card"><i class="fas fa-moon"></i><h4>Dark mode only</h4>
+                <p>ဥက္ကဋ္ဌကြီးသည် dark mode ကိုသာ သုံးသည် — အလင်း(လောင်တီး)ကို သူကိုယ်တိုင် ပေးနိုင်သောကြောင့်။</p></div>
+            <div class="dl-card"><i class="fas fa-network-wired"></i><h4>Load balancing</h4>
+                <p>မျိုးစောင့်ဥပဒေအရ ဇနီး ၄ ဦးထားခြင်းသည် ဥက္ကဋ္ဌကြီး၏ 'load balancing' နည်းပညာဟု သရော်ကြသည်။</p></div>
+            <div class="dl-card"><i class="fas fa-piggy-bank"></i><h4>Passive income (2017)</h4>
+                <p>ထောင်ထဲမှ သပိတ်ဝေစုရအောင် စီစဉ်နိုင်ခဲ့သည် — engineer များ မသိမီကတည်းက passive income ကျင့်သုံးသူ။</p></div>
+            <div class="dl-card"><i class="fas fa-ghost"></i><h4>404: တာဇံ Not Found</h4>
+                <p>404 Not Found ကို ဥက္ကဋ္ဌကြီးက 'တာဇံ Not Found' ဟု ဘာသာပြန်သည် — မဂၤလာတစ်ပါး။</p></div>
+        </div>
+        <p style="text-align:center;color:#888;font-family:'Padauk',sans-serif;margin-top:24px;">
+            OS ထဲတွင် terminal ဖွင့်တိုင်း၊ Conky widget တွင်လည်း ဤကဲ့သို့ သိကောင်းစရာ ၃၀ ကျော် ကျပန်း ပေါ်လာသည်။
+        </p>
+    </section>
+
+    <!-- Install guide -->
+    <section class="dl-section" id="install">
+        <h3>တပ်ဆင်နည်း လမ်းညွှန်</h3>
+        <p class="sub">EASY INSTALLATION GUIDE</p>
+
+        <p class="guide-h"><i class="fas fa-microchip"></i> လိုအပ်ချက်များ (System Requirements)</p>
+        <ol class="guide">
+            <li><b>PC / Intel Mac (amd64):</b> 64-bit (x86-64) CPU — Windows laptop ဟောင်းသစ်မရွေး၊ Linux PC များ၊ Intel Mac များ။ VirtualBox / VMware / USB boot အားလုံးရ။</li>
+            <li><b>Apple Silicon Mac (arm64):</b> M1/M2/M3/M4 — UTM ဖြင့် arm64 ISO ကို native run (နည်းလမ်း ၃ ကို ကြည့်ပါ)။</li>
+            <li>အနည်းဆုံး RAM 4 GB (security tools အတွက် 6 GB+ အကြံပြု)၊ disk 25–30 GB။</li>
+        </ol>
+
+        <p class="guide-h"><i class="fas fa-cube"></i> နည်းလမ်း ၁ — VirtualBox တွင် စမ်းသပ်ခြင်း (အလွယ်ဆုံး)</p>
+        <ol class="guide">
+            <li>VirtualBox ကို <code>virtualbox.org</code> မှ download လုပ်၍ install လုပ်ပါ။</li>
+            <li><b>New</b> နှိပ်ပြီး — Name: <code>Thakhin OS</code>, Type: <code>Linux</code>, Version: <code>Debian (64-bit)</code> ရွေးပါ။</li>
+            <li>Memory <b>4096 MB</b>, Virtual disk <b>25 GB (VDI, dynamically allocated)</b> ပေးပါ။</li>
+            <li>Settings → Storage → Optical Drive တွင် <code>ThakhinOS-1.0-amd64.iso</code> ကို ချိတ်ပါ။</li>
+            <li>Start နှိပ်ပါ — ရွှေရောင် boot menu ပေါ်လာလျှင် <b>Thakhin OS 1.0 Live</b> ကို ရွေးပါ။</li>
+            <li>Desktop ရောက်လျှင် <b>"Install Thakhin OS (သခင် OS တပ်ဆင်ရန်)"</b> icon ကို double-click နှိပ်ပါ။</li>
+            <li>Installer အဆင့်များအတိုင်း သွားပါ — install နေစဉ် ဥက္ကဋ္ဌကြီး quiz slideshow ကို ခံစားပါ။ ပြီးလျှင် reboot လုပ်ပြီး ISO ကို ဖြုတ်ပါ။</li>
+        </ol>
+
+        <p class="guide-h"><i class="fab fa-usb"></i> နည်းလမ်း ၂ — USB ဖြင့် Laptop/PC အစစ်တွင် တပ်ဆင်ခြင်း</p>
+        <ol class="guide">
+            <li>8 GB+ USB stick တစ်ချောင်း ပြင်ပါ (ထဲက data အားလုံး ပျက်မည် — backup ဦးစွာလုပ်ပါ)။</li>
+            <li><b>Windows တွင်:</b> <code>Rufus</code> (rufus.ie) သို့မဟုတ် <code>balenaEtcher</code> ဖြင့် ISO ကို USB ထဲ ရေးပါ။<br>
+                <b>macOS / Linux တွင်:</b> balenaEtcher သို့မဟုတ် <code>sudo dd if=ThakhinOS-1.0-amd64.iso of=/dev/sdX bs=4M status=progress</code></li>
+            <li>Laptop ကို restart လုပ်ပြီး boot menu ဝင်ပါ — အများအားဖြင့် <code>F12</code> (Dell/Lenovo), <code>F9</code> (HP), <code>F2/Del</code> (Asus/Acer/MSI), Intel Mac တွင် <code>Option (⌥)</code> ကို ဖိထားပါ။</li>
+            <li>USB ကို ရွေး၍ boot လုပ်ပါ — BIOS ရော UEFI ရော အလုပ်လုပ်သည် (Secure Boot ပိတ်ရန် လိုနိုင်သည်)။</li>
+            <li>Live desktop ရောက်လျှင် Install icon နှိပ်ပြီး လမ်းညွှန်အတိုင်း ဆက်သွားပါ — Windows နှင့် dual-boot လိုလျှင် installer ၏ "Install alongside" ကို ရွေးပါ။</li>
+        </ol>
+
+        <p class="guide-h"><i class="fab fa-apple"></i> နည်းလမ်း ၃ — Apple Silicon Mac (M1/M2/M3/M4) — UTM</p>
+        <ol class="guide">
+            <li>UTM ကို <code>mac.getutm.app</code> (သို့) App Store မှ install လုပ်ပါ — အခမဲ့။</li>
+            <li><b>arm64</b> ISO (<code>ThakhinOS-1.0-arm64.iso</code>) ကို download လုပ်ပါ — Apple Silicon အတွက် native ဖြစ်၍ အလွန်မြန်သည် (emulation မဟုတ်)။</li>
+            <li>UTM → <b>Create a New Virtual Machine → Virtualize → Linux</b> ရွေးပါ။</li>
+            <li>Boot ISO image တွင် <code>ThakhinOS-1.0-arm64.iso</code> ကို ရွေးပါ။ RAM 4 GB+, disk 25 GB+ သတ်မှတ်ပါ။</li>
+            <li>VM ကို start လုပ်ပါ — GRUB (UEFI) ရွှေရောင် menu မှ <b>Thakhin OS 1.0 Live</b> ကို ရွေးပါ။</li>
+            <li>Desktop ရောက်လျှင် Install icon နှိပ်၍ လမ်းညွှန်အတိုင်း ဆက်သွားပါ။</li>
+            <li><small style="color:#FF9933">amd64 ISO ကို Apple Silicon တွင် UTM ၏ Emulate mode ဖြင့်လည်း run နိုင်သော်လည်း များစွာ နှေးသည် — arm64 ကို အသုံးပြုရန် အကြံပြုသည်။ VirtualBox သည် Apple Silicon တွင် amd64 ISO ကို boot မလုပ်နိုင်ပါ။</small></li>
+        </ol>
+
+        <p class="guide-h"><i class="fas fa-check-circle"></i> တပ်ဆင်ပြီးနောက် ပထမဆုံးလုပ်ရန်</p>
+        <ol class="guide">
+            <li>Terminal ဖွင့်ပါ — neofetch နှင့် ဥက္ကဋ္ဌကြီး fact တစ်ခု ကြိုဆိုလိမ့်မည်။</li>
+            <li><code>tarzan-check</code> ရိုက်၍ မြို့သားသခင် စစ်ဆေးမှု ဖြေဆိုပါ — ၉ မှတ်အထက်ရလျှင် စစ်မှန်သော သခင်။</li>
+            <li><code>thakhin-arsenal</code> ဖြင့် security tools စာရင်းကြည့်ပါ။</li>
+            <li>System update: <code>thakhin apt update && thakhin apt upgrade</code></li>
+        </ol>
+    </section>
+
+    <!-- FAQ -->
+    <section class="dl-section" id="faq">
+        <h3>မေးလေ့ရှိသော မေးခွန်းများ</h3>
+        <p class="sub">FAQ</p>
+        <details class="faq"><summary>ဒါ တကယ့် OS လား၊ ဟာသလား?</summary>
+            <p>နှစ်ခုလုံး ဖြစ်သည်။ ၁၀၀% အလုပ်လုပ်သော Debian 12 stable အခြေခံ OS အစစ်ဖြစ်ပြီး branding နှင့် content အားလုံးမှာ winkokolatt.me ၏ သရော်စာ (satire) universe ဖြစ်သည်။ နေ့စဉ် development အလုပ်တွင် တကယ်သုံးလို့ရသည်။</p></details>
+        <details class="faq"><summary>Live mode ၏ login က ဘာလဲ?</summary>
+            <p>Username <code>thakhin</code> / Password <code>thakhin</code> (root password လည်း <code>thakhin</code>)။ Login ဖန်သားပြင်တွင် ☸ branded greeter ပေါ်လာပါက ဤ credentials ဖြင့် ဝင်ပါ။ Install လုပ်သောအခါ ကိုယ်ပိုင် username/password သတ်မှတ်နိုင်သည်။</p></details>
+        <details class="faq"><summary>Windows လိုင်စင် လိုသလား? ကုန်ကျစရိတ်က?</summary>
+            <p>ဘာမှမလို — အခမဲ့ (free & open source) ဖြစ်သည်။ ဥက္ကဋ္ဌကြီး၏ စပွန်ဆာကြေးများနှင့် မတူဘဲ ဤ OS မှာ တစ်ပြားမှ မပေးရ။</p></details>
+        <details class="faq"><summary>Updates ဘယ်လိုရမလဲ?</summary>
+            <p>Debian repository များမှ ပုံမှန်အတိုင်း — <code>sudo apt update && sudo apt upgrade</code>။ VS Code မှာလည်း Microsoft repo ချိတ်ပြီးသားဖြစ်၍ အလိုအလျောက် update ရသည်။</p></details>
+        <details class="faq"><summary>sudo ကို thakhin နဲ့ အစားထိုးထားတာလား? sudo ဆက်သုံးလို့ရသေးလား?</summary>
+            <p>Root အခွင့်အာဏာ တောင်းရန် <code>thakhin &lt;command&gt;</code> ကို သုံးသည် (ဥပမာ <code>thakhin apt update</code>)။ မူရင်း <code>sudo</code> binary ကိုမူ ဖျက်မထားပါ — script/package များ ပျက်စီးမသွားစေရန် ဆက်လက်အလုပ်လုပ်နေသည်။ <code>thakhin</code> မှာ sudo ၏ themed wrapper ဖြစ်ပြီး Burmese lecture နှင့် ☸ prompt ပါဝင်သည်။</p></details>
+        <details class="faq"><summary>Security tools တွေက တရားဝင်လား? ဘယ်လိုသုံးရမလဲ?</summary>
+            <p>nmap, Metasploit, Wireshark, aircrack-ng စသည့် tools အားလုံးသည် Kali/Parrot OS တို့နည်းတူ လွတ်လပ်စွာ ရရှိနိုင်သော၊ security professional များ တရားဝင်သုံးသော tools များဖြစ်သည်။ <b>ကိုယ်ပိုင် (သို့) authorized system များ၊ CTF ပြိုင်ပွဲများ၊ ပညာရေး</b> အတွက်သာ သုံးပါ။ အခွင့်မရှိသော စနစ်များကို တိုက်ခိုက်ခြင်းသည် တရားမဝင်ပါ — တာဇံ လုပ်ရပ်ဖြစ်သည်။</p></details>
+        <details class="faq"><summary>amd64 နဲ့ arm64 — ဘယ်ဟာ download လုပ်ရမလဲ?</summary>
+            <p>Windows/Linux PC သို့ Intel Mac သို့ VirtualBox ဆိုလျှင် <b>amd64</b>။ Apple Silicon (M1–M4) Mac ပေါ်တွင် UTM ဖြင့် run မည်ဆိုလျှင် <b>arm64</b> (native, မြန်သည်)။</p></details>
+        <details class="faq"><summary>တာဇံတစ်ယောက်က ဒီ OS သုံးရင် ဘာဖြစ်မလဲ?</summary>
+            <p>တပ်ဆင်ပြီးသည်နှင့် မြို့သားသခင်အဖြစ် အလိုအလျောက် အသိအမှတ်ပြုခံရသည် — ရှေ့တန်းအမှတ် (၁) စခန်းသို့ သွားစရာ မလိုတော့ပါ။ ပညာပေးအောင်မြင်မှု တစ်ခုအဖြစ် MTC မှ မှတ်တမ်းတင်မည်။</p></details>
+    </section>
+
+    <!-- Credits -->
+    <section class="dl-section" id="credits">
+        <h3>Credits</h3>
+        <p class="sub">ဂုဏ်ပြုမှတ်တမ်း</p>
+        <div class="credits-box">
+            <img src="../../images/webprofilepicture-optimized.jpg" alt="ဌာနမှူး" style="width:120px;height:120px;border-radius:50%;border:4px solid #D4AF37;margin-bottom:14px;">
+            <div class="big">ဌာနမှူး ဥက္ကဋ္ဌကြီး ဝင်းကိုကိုလတ် (သခင်ကြီး)</div>
+            <div class="role">Main Developer, Chief Visionary & Lead Tarzan-Suppression Architect — AnonyLatt ဌာနကြီး</div>
+            <p>
+                🛡 <b>တောသားနှိမ်နင်းရေးအသင်း</b> — Quality Assurance (တာဇံကင်းစင်ကြောင်း စစ်ဆေးပြီး)<br>
+                🏛 <b>မြန်မာနိုင်ငံတောသားကောင်စီ (MTC)</b> — တရားဝင် အသိအမှတ်ပြုချက်<br>
+                ⛺ <b>ရှေ့တန်းအမှတ် (၁) တောသားထိန်းသိမ်းရေးတပ်ဖွဲ့ခွဲ</b> — Field Testing<br>
+                ✍️ <b>ဖိုးလောင်ထူး</b> — Documentation (စာအုပ် ၂၀ ကျော် အတွေ့အကြုံဖြင့်)<br>
+                ☸ Debian Project နှင့် Free Software community — အမှန်တကယ် code ရေးပေးသူများ
+            </p>
+            <div class="flag-strip">
+                <span style="background:#0000CD"></span>
+                <span style="background:#FFD700"></span>
+                <span style="background:#E21B1B"></span>
+                <span style="background:#FFFFFF"></span>
+                <span style="background:#FF80C0"></span>
+            </div>
+            <p style="margin-top:16px;color:#D4AF37;">"အမျိုးကိုစောင့်၊ ဘာသာကိုစောင့်၊ သာသနာကိုစောင့် — Data ကိုလည်းစောင့်"</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">☸</span>
+                    <h3>ဝင်းကိုကိုလတ်</h3>
+                    <p>သခင်ကြီး | Thakin Gyi</p>
+                    <p class="footer-website">winkokolatt.me</p>
+                </div>
+                <div class="footer-quote">
+                    <blockquote>"အမျိုးကိုစောင့်၊ ဘာသာကိုစောင့်၊ သာသနာကိုစောင့်"</blockquote>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Thakhin OS — AnonyLatt ဌာနကြီး. Free as in Freedom.</p>
+                <p class="footer-mabatha">မဘသ - အမျိုးဘာသာ သာသနာ ကာကွယ်ရေး | တောသားနှိမ်နင်းရေးအသင်း | MTC</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
